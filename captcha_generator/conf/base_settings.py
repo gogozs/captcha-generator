@@ -13,11 +13,7 @@ class _Settings():
 
 
 class _ModuleConstants():
-    BASE_DIR = os.path.join(os.path.abspath(os.path.dirname(os.path.dirname(__file__))), "..")
-    FONT_DIR = os.path.join(BASE_DIR, "font/")
-    OUTPUT_DIR = os.path.join(BASE_DIR, "output/")
-    CAPTCHA_OUTPUT = os.path.join(OUTPUT_DIR, "captcha/")
-    LABEL_OUTPUT = os.path.join(OUTPUT_DIR, "label/")
+    FONT_DIR = os.path.join(os.path.abspath(os.path.dirname(os.path.dirname(__file__))), "font/")
 
 # 引入
 settings = _Settings()
