@@ -2,3 +2,6 @@
 
 class CaptchaException(Exception):
     pass
+
+class CaptchaParamsException(Exception):
+    pass

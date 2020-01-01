@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='captcha_generator',
+    name='captcha-generator',
     version='1.0',
-    description='generate captcha',
+    description='a simple generate captcha library',
     author='zs',
     license="MIT Licence",
     packages=['captcha_generator'],

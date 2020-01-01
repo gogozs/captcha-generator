@@ -10,7 +10,7 @@ from captcha_generator.captcha.base_factory import BaseFactory
 from captcha_generator.conf.base_settings import settings, mc
 from typing import Union
 
-from captcha_generator.exception.exception import CaptchaException
+from captcha_generator.exception.exception import CaptchaException, CaptchaParamsException
 
 ListTuple = Union[list, tuple]
 
@@ -60,7 +60,7 @@ class PicFactory(BaseFactory):
         :return:
         """
         if len(img_size) != 2:
-            raise CaptchaException("invalid params")
+            raise CaptchaParamsException("invalid params")
         self.__img_size = img_size
 
     def _random(self, char_num: int):
@@ -70,4 +70,3 @@ class PicFactory(BaseFactory):
         if char_num <= 0:
             char_num = 4
         return "".join([random.choice(self.__charset) for _ in range(char_num)])
-
